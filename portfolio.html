@@ -3,93 +3,383 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <title>Portfolio - Mateusz Chmura</title>
-    <style>
-        .portfolio-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .portfolio-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important;
-        }
-        .portfolio-img {
-            height: 220px;
-            object-fit: cover;
-        }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Portfolio</title>
 </head>
 <body>
     <div class="container">
-      <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-        <a href="./index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-          <img src="./assets/logo.jpg" alt="logo" style="border-radius: 50%; width: 40px; height: 40px; object-fit: cover;" class="me-2">
-          <span class="fs-4">Mateusz Chmura</span>
+  <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+    <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+      <img src="./assets/logo.jpg" alt="logo" style="border-radius: 50%;">
+      <span class="fs-4">
+        Mateusz Chmura
+      </span>
+    </a>
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a href="./index.html" class="nav-link" aria-current="page">
+          Home
         </a>
-        <ul class="nav nav-pills">
-          <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="./portfolio.html" class="nav-link active" aria-current="page">Portfolio</a></li>
-          <li class="nav-item"><a href="./index.html#cennik" class="nav-link">Ceny</a></li>
-          <li class="nav-item"><a href="./faq.html" class="nav-link">FAQ</a></li>
-          <li class="nav-item"><a href="./about.html" class="nav-link">O mnie</a></li>
-        </ul>
-      </header>
+      </li>
+      <li class="nav-item">
+        <a href="./portfolio.html" class="nav-link  active">
+          Portfolio
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="./index.html#cennik" class="nav-link">
+          Ceny
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="./faq.html" class="nav-link">
+          FAQ
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="./about.html" class="nav-link">
+          O mnie
+        </a>
+      </li>
+    </ul>
+  </header>
 
-      <div class="text-center my-5">
-          <h1 class="display-5 fw-bold">Moje Projekty</h1>
-          <p class="lead text-muted">Zobacz gry i aplikacje, które napisałem w celach treningowych i komercyjnych.</p>
-      </div>
-
-      <div class="album py-5 bg-body-tertiary rounded-4 px-3 mb-5">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4 justify-content-center">
-          
-          <!-- Projekt 1: Snake -->
+  <div class="album py-5 bg-body-tertiary">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
           <div class="col">
-            <div class="card h-100 shadow-sm border-0 portfolio-card">
-              <img src="./assets/snake.png" class="card-img-top portfolio-img" alt="Gra Snake">
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title fw-bold">Gra Snake</h5>
-                <p class="card-text text-muted flex-grow-1">
-                  Klasyczna i kultowa gra typu Snake znana ze starych telefonów. Zaimplementowana przy użyciu czystego JavaScriptu i technologii Canvas.
+            <div class="card shadow-sm">
+              <img src="./assets/snake.png" alt="wąż">
+                <title>
+                  Gra Snake
+                </title>
+                <rect width="100%" height="100%" fill="#55595c">
+                </rect>
+                <text x="50%" y="50%" fill="#eceeef" dy=".3em">
+                  Gra Snake
+                </text>
+              </svg>
+              <div class="card-body">
+                <p class="card-text">
+                  Prosta gra Snake znana chyba każdemu kto miał kiedykolwiek telefon Nokia :)
                 </p>
-                <div class="mt-3">
-                  <a href="https://mateuszchmura94-dev.github.io/waz/" target="_blank" class="btn btn-primary w-100">Uruchom w przeglądarce</a>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button onclick="location.href='https://mateuszchmura94-dev.github.io/waz/'" type="button" class="btn btn-sm btn-outline-secondary">
+                      Pokaż
+                    </button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary" style = "visibility: hidden">
+                      Edit
+                    </button>
+                  </div>
+                  <small class="text-body-secondary" style = "visibility: hidden">
+                    9 mins
+                  </small>
                 </div>
               </div>
             </div>
           </div>
-
-          <!-- Projekt 2: Simon -->
           <div class="col">
-            <div class="card h-100 shadow-sm border-0 portfolio-card">
-              <img src="./assets/simon.png" class="card-img-top portfolio-img" alt="Gra Simon">
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title fw-bold">Gra Simon Says</h5>
-                <p class="card-text text-muted flex-grow-1">
-                  Klasyczny generator sekwencji dźwiękowo-wizualnych sprawdzający pamięć gracza. Projekt ćwiczący asynchroniczność w JavaScript.
+            <div class="card shadow-sm">
+              <img src="./assets/simon.png" alt="Simon">
+                <title>
+                  Simon
+                </title>
+                <rect width="100%" height="100%" fill="#55595c">
+                </rect>
+                <text x="50%" y="50%" fill="#eceeef" dy=".3em">
+                  Gra Simon
+                </text>
+              </svg>
+              <div class="card-body">
+                <p class="card-text">
+                  Sprawdź jak dobrą masz pamięć. Uwaga, wciąga!
                 </p>
-                <div class="mt-3">
-                  <a href="https://mateuszchmura94-dev.github.io/gierka/" target="_blank" class="btn btn-primary w-100">Uruchom w przeglądarce</a>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button onclick="location.href='https://mateuszchmura94-dev.github.io/gierka/'" type="button" class="btn btn-sm btn-outline-secondary">
+                      Pokaż
+                    </button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary" style = "visibility: hidden">
+                      Edit
+                    </button>
+                  </div>
+                  <small class="text-body-secondary" style = "visibility: hidden">
+                    9 mins
+                  </small>
                 </div>
               </div>
             </div>
           </div>
-
+          <div class="col" style="visibility: hidden;">
+            <div class="card shadow-sm">
+              <svg aria-label="Placeholder: Thumbnail" class="bd-placeholder-img card-img-top" height="225" preserveAspectRatio="xMidYMid slice" role="img" width="100%" xmlns="http://www.w3.org/2000/svg">
+                <title>
+                  Placeholder
+                </title>
+                <rect width="100%" height="100%" fill="#55595c">
+                </rect>
+                <text x="50%" y="50%" fill="#eceeef" dy=".3em">
+                  Thumbnail
+                </text>
+              </svg>
+              <div class="card-body">
+                <p class="card-text">
+                  This is a wider card with supporting text below as a natural lead-in to
+                  additional content. This content is a little bit longer.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">
+                      View
+                    </button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">
+                      Edit
+                    </button>
+                  </div>
+                  <small class="text-body-secondary">
+                    9 mins
+                  </small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" style="visibility: hidden;">
+            <div class="card shadow-sm">
+              <svg aria-label="Placeholder: Thumbnail" class="bd-placeholder-img card-img-top" height="225" preserveAspectRatio="xMidYMid slice" role="img" width="100%" xmlns="http://www.w3.org/2000/svg">
+                <title>
+                  Placeholder
+                </title>
+                <rect width="100%" height="100%" fill="#55595c">
+                </rect>
+                <text x="50%" y="50%" fill="#eceeef" dy=".3em">
+                  Thumbnail
+                </text>
+              </svg>
+              <div class="card-body">
+                <p class="card-text">
+                  This is a wider card with supporting text below as a natural lead-in to
+                  additional content. This content is a little bit longer.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">
+                      View
+                    </button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">
+                      Edit
+                    </button>
+                  </div>
+                  <small class="text-body-secondary">
+                    9 mins
+                  </small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" style="visibility: hidden;">
+            <div class="card shadow-sm">
+              <svg aria-label="Placeholder: Thumbnail" class="bd-placeholder-img card-img-top" height="225" preserveAspectRatio="xMidYMid slice" role="img" width="100%" xmlns="http://www.w3.org/2000/svg">
+                <title>
+                  Placeholder
+                </title>
+                <rect width="100%" height="100%" fill="#55595c">
+                </rect>
+                <text x="50%" y="50%" fill="#eceeef" dy=".3em">
+                  Thumbnail
+                </text>
+              </svg>
+              <div class="card-body">
+                <p class="card-text">
+                  This is a wider card with supporting text below as a natural lead-in to
+                  additional content. This content is a little bit longer.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">
+                      View
+                    </button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">
+                      Edit
+                    </button>
+                  </div>
+                  <small class="text-body-secondary">
+                    9 mins
+                  </small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" style="visibility: hidden;">
+            <div class="card shadow-sm">
+              <svg aria-label="Placeholder: Thumbnail" class="bd-placeholder-img card-img-top" height="225" preserveAspectRatio="xMidYMid slice" role="img" width="100%" xmlns="http://www.w3.org/2000/svg">
+                <title>
+                  Placeholder
+                </title>
+                <rect width="100%" height="100%" fill="#55595c">
+                </rect>
+                <text x="50%" y="50%" fill="#eceeef" dy=".3em">
+                  Thumbnail
+                </text>
+              </svg>
+              <div class="card-body">
+                <p class="card-text">
+                  This is a wider card with supporting text below as a natural lead-in to
+                  additional content. This content is a little bit longer.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">
+                      View
+                    </button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">
+                      Edit
+                    </button>
+                  </div>
+                  <small class="text-body-secondary">
+                    9 mins
+                  </small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" style="visibility: hidden;">
+            <div class="card shadow-sm">
+              <svg aria-label="Placeholder: Thumbnail" class="bd-placeholder-img card-img-top" height="225" preserveAspectRatio="xMidYMid slice" role="img" width="100%" xmlns="http://www.w3.org/2000/svg">
+                <title>
+                  Placeholder
+                </title>
+                <rect width="100%" height="100%" fill="#55595c">
+                </rect>
+                <text x="50%" y="50%" fill="#eceeef" dy=".3em">
+                  Thumbnail
+                </text>
+              </svg>
+              <div class="card-body">
+                <p class="card-text">
+                  This is a wider card with supporting text below as a natural lead-in to
+                  additional content. This content is a little bit longer.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">
+                      View
+                    </button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">
+                      Edit
+                    </button>
+                  </div>
+                  <small class="text-body-secondary">
+                    9 mins
+                  </small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" style="visibility: hidden;">
+            <div class="card shadow-sm">
+              <svg aria-label="Placeholder: Thumbnail" class="bd-placeholder-img card-img-top" height="225" preserveAspectRatio="xMidYMid slice" role="img" width="100%" xmlns="http://www.w3.org/2000/svg">
+                <title>
+                  Placeholder
+                </title>
+                <rect width="100%" height="100%" fill="#55595c">
+                </rect>
+                <text x="50%" y="50%" fill="#eceeef" dy=".3em">
+                  Thumbnail
+                </text>
+              </svg>
+              <div class="card-body">
+                <p class="card-text">
+                  This is a wider card with supporting text below as a natural lead-in to
+                  additional content. This content is a little bit longer.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">
+                      View
+                    </button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">
+                      Edit
+                    </button>
+                  </div>
+                  <small class="text-body-secondary">
+                    9 mins
+                  </small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" style="visibility: hidden;">
+            <div class="card shadow-sm">
+              <svg aria-label="Placeholder: Thumbnail" class="bd-placeholder-img card-img-top" height="225" preserveAspectRatio="xMidYMid slice" role="img" width="100%" xmlns="http://www.w3.org/2000/svg">
+                <title>
+                  Placeholder
+                </title>
+                <rect width="100%" height="100%" fill="#55595c">
+                </rect>
+                <text x="50%" y="50%" fill="#eceeef" dy=".3em">
+                  Thumbnail
+                </text>
+              </svg>
+              <div class="card-body">
+                <p class="card-text">
+                  This is a wider card with supporting text below as a natural lead-in to
+                  additional content. This content is a little bit longer.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">
+                      View
+                    </button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">
+                      Edit
+                    </button>
+                  </div>
+                  <small class="text-body-secondary">
+                    9 mins
+                  </small>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
-      <!-- Footer -->
-      <footer class="py-3 my-4 border-top">
-        <ul class="nav justify-content-center pb-3 mb-3">
-          <li class="nav-item"><a href="./index.html" class="nav-link px-2 text-body-secondary">Home</a></li>
-          <li class="nav-item"><a href="./portfolio.html" class="nav-link px-2 text-body-secondary">Portfolio</a></li>
-          <li class="nav-item"><a href="./index.html#cennik" class="nav-link px-2 text-body-secondary">Ceny</a></li>
-          <li class="nav-item"><a href="./faq.html" class="nav-link px-2 text-body-secondary">FAQ</a></li>
-          <li class="nav-item"><a href="./about.html" class="nav-link px-2 text-body-secondary">O mnie</a></li>
-        </ul>
-        <p class="text-center text-body-secondary">© 2026 Mateusz Chmura</p>
-      </footer>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <div class="container">
+  <footer class="py-3 my-4">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <li class="nav-item">
+        <a href="./index.html" class="nav-link px-2 text-body-secondary">
+          Home
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="./portfolio.html" class="nav-link px-2 text-body-secondary">
+          Portfolio
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="./index.html#cennik" class="nav-link px-2 text-body-secondary">
+          Ceny
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="./faq.html" class="nav-link px-2 text-body-secondary">
+          FAQ
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="./about.html" class="nav-link px-2 text-body-secondary">
+          O mnie
+        </a>
+      </li>
+    </ul>
+    <p class="text-center text-body-secondary">
+      © 2026 Mateusz Chmura
+    </p>
+  </footer>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
