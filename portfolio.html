@@ -3,383 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio – Mateusz Chmura</title>
+    <meta name="description" content="Wybrane projekty: gra Snake i gra pamięciowa Simon.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <title>Portfolio</title>
+    <link href="./assets/style.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-  <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-    <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-      <img src="./assets/logo.jpg" alt="logo" style="border-radius: 50%;">
-      <span class="fs-4">
-        Mateusz Chmura
-      </span>
+<nav class="navbar navbar-expand-md sticky-top site-nav">
+  <div class="container">
+    <a class="navbar-brand" href="./index.html">
+      <img src="./assets/logo.jpg" alt="" width="42" height="42">
+      <span>Mateusz Chmura</span>
     </a>
-    <ul class="nav nav-pills">
-      <li class="nav-item">
-        <a href="./index.html" class="nav-link" aria-current="page">
-          Home
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="./portfolio.html" class="nav-link  active">
-          Portfolio
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="./index.html#cennik" class="nav-link">
-          Ceny
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="./faq.html" class="nav-link">
-          FAQ
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="./about.html" class="nav-link">
-          O mnie
-        </a>
-      </li>
-    </ul>
-  </header>
-
-  <div class="album py-5 bg-body-tertiary">
-      <div class="container">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-          <div class="col">
-            <div class="card shadow-sm">
-              <img src="./assets/snake.png" alt="wąż">
-                <title>
-                  Gra Snake
-                </title>
-                <rect width="100%" height="100%" fill="#55595c">
-                </rect>
-                <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                  Gra Snake
-                </text>
-              </svg>
-              <div class="card-body">
-                <p class="card-text">
-                  Prosta gra Snake znana chyba każdemu kto miał kiedykolwiek telefon Nokia :)
-                </p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button onclick="location.href='https://mateuszchmura94-dev.github.io/waz/'" type="button" class="btn btn-sm btn-outline-secondary">
-                      Pokaż
-                    </button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary" style = "visibility: hidden">
-                      Edit
-                    </button>
-                  </div>
-                  <small class="text-body-secondary" style = "visibility: hidden">
-                    9 mins
-                  </small>
-                </div>
-              </div>
-            </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+      <ul class="navbar-nav gap-1">
+        <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="./portfolio.html" class="nav-link active" aria-current="page">Portfolio</a></li>
+        <li class="nav-item"><a href="./faq.html" class="nav-link">FAQ</a></li>
+        <li class="nav-item"><a href="./about.html" class="nav-link">O mnie</a></li>
+        <li class="nav-item"><a href="./contact.html" class="nav-link">Kontakt</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="page-head">
+  <div class="container">
+    <h1>Portfolio</h1>
+    <p>Wybrane projekty</p>
+  </div>
+</div>
+<main>
+<section class="section">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+      <div class="col">
+        <div class="card project-card">
+          <img src="./assets/snake.png" alt="Gra Snake">
+          <div class="card-body">
+            <p class="card-text">Prosta gra Snake znana chyba każdemu, kto miał kiedykolwiek telefon Nokia :)</p>
+            <a href="https://mateuszchmura94-dev.github.io/waz/" class="btn btn-outline-primary" target="_blank" rel="noopener noreferrer">Pokaż</a>
           </div>
-          <div class="col">
-            <div class="card shadow-sm">
-              <img src="./assets/simon.png" alt="Simon">
-                <title>
-                  Simon
-                </title>
-                <rect width="100%" height="100%" fill="#55595c">
-                </rect>
-                <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                  Gra Simon
-                </text>
-              </svg>
-              <div class="card-body">
-                <p class="card-text">
-                  Sprawdź jak dobrą masz pamięć. Uwaga, wciąga!
-                </p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button onclick="location.href='https://mateuszchmura94-dev.github.io/gierka/'" type="button" class="btn btn-sm btn-outline-secondary">
-                      Pokaż
-                    </button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary" style = "visibility: hidden">
-                      Edit
-                    </button>
-                  </div>
-                  <small class="text-body-secondary" style = "visibility: hidden">
-                    9 mins
-                  </small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col" style="visibility: hidden;">
-            <div class="card shadow-sm">
-              <svg aria-label="Placeholder: Thumbnail" class="bd-placeholder-img card-img-top" height="225" preserveAspectRatio="xMidYMid slice" role="img" width="100%" xmlns="http://www.w3.org/2000/svg">
-                <title>
-                  Placeholder
-                </title>
-                <rect width="100%" height="100%" fill="#55595c">
-                </rect>
-                <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                  Thumbnail
-                </text>
-              </svg>
-              <div class="card-body">
-                <p class="card-text">
-                  This is a wider card with supporting text below as a natural lead-in to
-                  additional content. This content is a little bit longer.
-                </p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">
-                      View
-                    </button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">
-                      Edit
-                    </button>
-                  </div>
-                  <small class="text-body-secondary">
-                    9 mins
-                  </small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col" style="visibility: hidden;">
-            <div class="card shadow-sm">
-              <svg aria-label="Placeholder: Thumbnail" class="bd-placeholder-img card-img-top" height="225" preserveAspectRatio="xMidYMid slice" role="img" width="100%" xmlns="http://www.w3.org/2000/svg">
-                <title>
-                  Placeholder
-                </title>
-                <rect width="100%" height="100%" fill="#55595c">
-                </rect>
-                <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                  Thumbnail
-                </text>
-              </svg>
-              <div class="card-body">
-                <p class="card-text">
-                  This is a wider card with supporting text below as a natural lead-in to
-                  additional content. This content is a little bit longer.
-                </p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">
-                      View
-                    </button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">
-                      Edit
-                    </button>
-                  </div>
-                  <small class="text-body-secondary">
-                    9 mins
-                  </small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col" style="visibility: hidden;">
-            <div class="card shadow-sm">
-              <svg aria-label="Placeholder: Thumbnail" class="bd-placeholder-img card-img-top" height="225" preserveAspectRatio="xMidYMid slice" role="img" width="100%" xmlns="http://www.w3.org/2000/svg">
-                <title>
-                  Placeholder
-                </title>
-                <rect width="100%" height="100%" fill="#55595c">
-                </rect>
-                <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                  Thumbnail
-                </text>
-              </svg>
-              <div class="card-body">
-                <p class="card-text">
-                  This is a wider card with supporting text below as a natural lead-in to
-                  additional content. This content is a little bit longer.
-                </p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">
-                      View
-                    </button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">
-                      Edit
-                    </button>
-                  </div>
-                  <small class="text-body-secondary">
-                    9 mins
-                  </small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col" style="visibility: hidden;">
-            <div class="card shadow-sm">
-              <svg aria-label="Placeholder: Thumbnail" class="bd-placeholder-img card-img-top" height="225" preserveAspectRatio="xMidYMid slice" role="img" width="100%" xmlns="http://www.w3.org/2000/svg">
-                <title>
-                  Placeholder
-                </title>
-                <rect width="100%" height="100%" fill="#55595c">
-                </rect>
-                <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                  Thumbnail
-                </text>
-              </svg>
-              <div class="card-body">
-                <p class="card-text">
-                  This is a wider card with supporting text below as a natural lead-in to
-                  additional content. This content is a little bit longer.
-                </p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">
-                      View
-                    </button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">
-                      Edit
-                    </button>
-                  </div>
-                  <small class="text-body-secondary">
-                    9 mins
-                  </small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col" style="visibility: hidden;">
-            <div class="card shadow-sm">
-              <svg aria-label="Placeholder: Thumbnail" class="bd-placeholder-img card-img-top" height="225" preserveAspectRatio="xMidYMid slice" role="img" width="100%" xmlns="http://www.w3.org/2000/svg">
-                <title>
-                  Placeholder
-                </title>
-                <rect width="100%" height="100%" fill="#55595c">
-                </rect>
-                <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                  Thumbnail
-                </text>
-              </svg>
-              <div class="card-body">
-                <p class="card-text">
-                  This is a wider card with supporting text below as a natural lead-in to
-                  additional content. This content is a little bit longer.
-                </p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">
-                      View
-                    </button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">
-                      Edit
-                    </button>
-                  </div>
-                  <small class="text-body-secondary">
-                    9 mins
-                  </small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col" style="visibility: hidden;">
-            <div class="card shadow-sm">
-              <svg aria-label="Placeholder: Thumbnail" class="bd-placeholder-img card-img-top" height="225" preserveAspectRatio="xMidYMid slice" role="img" width="100%" xmlns="http://www.w3.org/2000/svg">
-                <title>
-                  Placeholder
-                </title>
-                <rect width="100%" height="100%" fill="#55595c">
-                </rect>
-                <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                  Thumbnail
-                </text>
-              </svg>
-              <div class="card-body">
-                <p class="card-text">
-                  This is a wider card with supporting text below as a natural lead-in to
-                  additional content. This content is a little bit longer.
-                </p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">
-                      View
-                    </button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">
-                      Edit
-                    </button>
-                  </div>
-                  <small class="text-body-secondary">
-                    9 mins
-                  </small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col" style="visibility: hidden;">
-            <div class="card shadow-sm">
-              <svg aria-label="Placeholder: Thumbnail" class="bd-placeholder-img card-img-top" height="225" preserveAspectRatio="xMidYMid slice" role="img" width="100%" xmlns="http://www.w3.org/2000/svg">
-                <title>
-                  Placeholder
-                </title>
-                <rect width="100%" height="100%" fill="#55595c">
-                </rect>
-                <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                  Thumbnail
-                </text>
-              </svg>
-              <div class="card-body">
-                <p class="card-text">
-                  This is a wider card with supporting text below as a natural lead-in to
-                  additional content. This content is a little bit longer.
-                </p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">
-                      View
-                    </button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">
-                      Edit
-                    </button>
-                  </div>
-                  <small class="text-body-secondary">
-                    9 mins
-                  </small>
-                </div>
-              </div>
-            </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card project-card">
+          <img src="./assets/simon.png" alt="Gra Simon">
+          <div class="card-body">
+            <p class="card-text">Sprawdź, jak dobrą masz pamięć. Uwaga, wciąga!</p>
+            <a href="https://mateuszchmura94-dev.github.io/gierka/" class="btn btn-outline-primary" target="_blank" rel="noopener noreferrer">Pokaż</a>
           </div>
         </div>
       </div>
     </div>
-
+  </div>
+</section>
+</main>
+<footer class="site-footer text-center">
   <div class="container">
-  <footer class="py-3 my-4">
-    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-      <li class="nav-item">
-        <a href="./index.html" class="nav-link px-2 text-body-secondary">
-          Home
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="./portfolio.html" class="nav-link px-2 text-body-secondary">
-          Portfolio
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="./index.html#cennik" class="nav-link px-2 text-body-secondary">
-          Ceny
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="./faq.html" class="nav-link px-2 text-body-secondary">
-          FAQ
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="./about.html" class="nav-link px-2 text-body-secondary">
-          O mnie
-        </a>
-      </li>
-    </ul>
-    <p class="text-center text-body-secondary">
-      © 2026 Mateusz Chmura
-    </p>
-  </footer>
-</div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <div class="mb-3">
+      <a href="./index.html">Home</a>
+      <a href="./portfolio.html">Portfolio</a>
+      <a href="./faq.html">FAQ</a>
+      <a href="./about.html">O mnie</a>
+      <a href="./contact.html">Kontakt</a>
+    </div>
+    <p class="mb-0">© 2026 Mateusz Chmura</p>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
